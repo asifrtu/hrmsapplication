@@ -1,0 +1,383 @@
+<div id="wrapper">
+	
+        <!-- Sidebar -->
+         <style>  
+@media (min-width:576px) {
+	.sidebarScroll {
+		display:hide;
+	}
+}		 
+         .sidebarScroll {
+  margin-top:50px;
+  width: 220px;
+  height: 410px;
+  overflow-y: scroll;
+  background-color:#000080;
+  border-radius: 15px 50px 30px 5px;
+}
+.style-8::-webkit-scrollbar-track
+{
+	border: 1px solid #6f42c1;
+	background-color: #F5F5F5;
+}
+
+.style-8::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+.style-8::-webkit-scrollbar-thumb
+{
+	background-color: #6f42c1;	
+}
+
+		 </style>                   
+		<div class="card sidebarScroll accordion sidebar" id="style-8 accordionSidebar">     
+        <ul class="navbar-nav sidebar sidebar-dark" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+				<div class="row">
+					
+					<div style="margin-right:10px;">
+						<img width="60px" src="<?= base_url("AssetsDashboard/img/5398195_aswe.jpg") ?>" class="rounded-circle" alt="Cinque Terre">
+						
+					</div>
+					
+					<div >
+					<p style="font-size: 12px;">Smith Richard</p> <sup><button class="btn btn-sm btn-success">CheckIn</button></sup>
+					</div>
+				</div>
+            </a>
+
+           
+            <!-- Heading -->
+            
+            <!-- Nav Item - Pages Collapse Menu -->
+            
+            <!-- Nav Item - Utilities Collapse Menu -->
+			<hr class="sidebar-divider">
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" >
+                    
+                    <span>Casual Leave</span><span class="float-right badge bg-success">12</span>
+                </a>
+                
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" >
+                    
+                    <span>Sick Leave</span><span class="float-right badge bg-success">12</span>
+                </a>
+                
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" >
+                    
+                    <span>Earned Leave</span><span class="float-right badge bg-success">12</span>
+                </a>
+                
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" >
+                    
+                    <span>Mid Day Leave</span><span class="float-right badge bg-success">12</span>
+                </a>
+                
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" >
+                    
+                    <span>Leave without Pay</span><span class="float-right badge bg-success">12</span>
+                </a>
+                
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" >
+                    
+                    <span>Weak Off</span><span class="float-right badge bg-success">12</span>
+                </a>
+                
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" >
+                    
+                    <span>Absent</span><span class="float-right badge bg-success">12</span>
+                </a>
+                
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" >
+                    
+                    <span>Gazetted Holidays</span><span class="float-right badge bg-success">12</span>
+                </a>
+                
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" >
+                    
+                    <span>My Calendar</span><span class="float-right badge bg-success">12</span>
+                </a>
+                
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            
+
+        </ul>
+		
+		</div>
+		
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column" style="margin-top: 105px!important;">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                   
+                    <!-- Content Row -->
+                    
+
+                    <!-- Content Row -->
+					<div class="row" >
+
+                        <!-- Content Column -->
+                        <div class="col-lg-6 mb-4" >
+						<h6 style="color:white;" class="m-0 font-weight-bold">Welcome Smith!</h6>
+						<div class="card shadow mb-4" style="background-color: #6f42c1!important;">
+                                <div class="card-header py-3" style="background-color: #6f42c1!important;">
+                                    
+                                    <h6 style="text-color:white!important;" ><?php $date = new DateTime(null, new DateTimezone("Asia/Kolkata"));
+										echo $date->format('d/m/y').' ';
+											echo $date->format('H:i a'); ?></h6>
+									
+                                </div>
+                        </div>
+                        </div>
+                        <div class="col-lg-6 mb-4" >
+						<h6 style="color:white;" class="m-0 font-weight-bold ">My Wall:</h6>
+                        <div class="card shadow mb-4" style="background-color: #6f42c1!important;">
+                                <div class="form-group">
+									
+									<input type="text" class="form-control" placeholder="What's on your mind..." id="email">
+									</div>
+                        </div>
+						</div>
+                    </div>
+                   <div class="row" >
+
+                        <!-- Content Column -->
+                        <div class="col-lg-6 mb-4" style="border:1px solid #5a5c69;">
+
+                            <!-- Project Card Example -->
+                            <div class="card shadow mb-4" style="background-color: #6f42c1!important;">
+                                <div class="card-header py-3" style="background-color: #6f42c1!important;">
+                                    
+                                    
+									
+                                </div>
+                                <div class="card-body">
+									<div class="row">
+									<div class="col-md-4">
+									<div class="info-box">
+									<i class="fas fa-envelope fa-fw"></i>
+									<div class="info-box-content">
+									<span class="info-box-text">Messages</span>
+
+									</div>
+									<!-- /.info-box-content -->
+									</div>
+									</div>
+									<div class="col-md-4">
+									<div class="info-box">
+									<div class="col-auto">
+									<i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+									</div>
+
+									<div class="info-box-content">
+									<span class="info-box-text">TAsks</span>
+
+									</div>
+									<!-- /.info-box-content -->
+									</div>
+									</div>
+									<div class="col-md-4">
+									<div class="info-box">
+									<span ><i class="far fa-calendar-alt"></i></span>
+									
+									<div class="info-box-content">
+									<span class="info-box-text">Calendar</span>
+
+									</div>
+									<!-- /.info-box-content -->
+									</div>
+									</div>
+									</div> 
+									
+									<div class="row">
+									<div class="col-md-4">
+									<div class="info-box">
+									<i class="fas fa-envelope fa-fw"></i>
+									<div class="info-box-content">
+									<span class="info-box-text">Messages</span>
+
+									</div>
+									<!-- /.info-box-content -->
+									</div>
+									</div>
+									<div class="col-md-4">
+									<div class="info-box">
+									<div class="col-auto">
+									<i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+									</div>
+
+									<div class="info-box-content">
+									<span class="info-box-text">TAsks</span>
+
+									</div>
+									<!-- /.info-box-content -->
+									</div>
+									</div>
+									<div class="col-md-4">
+									<div class="info-box">
+									<span class="info-box-icon"><i class="far fa-calendar-alt"></i></span>
+									<hr>	
+									<div class="info-box-content">
+									<span class="info-box-text">Calendar</span>
+
+									</div>
+									<!-- /.info-box-content -->
+									</div>
+									</div>
+									</div>
+									
+									<div class="row">
+									<div class="col-md-4">
+									<div class="info-box">
+									<i class="fas fa-envelope fa-fw"></i>
+									<div class="info-box-content">
+									<span class="info-box-text">Messages</span>
+
+									</div>
+									<!-- /.info-box-content -->
+									</div>
+									</div>
+									<div class="col-md-4">
+									<div class="info-box">
+									<div class="col-auto">
+									<i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+									</div>
+
+									<div class="info-box-content">
+									<span class="info-box-text">TAsks</span>
+
+									</div>
+									<!-- /.info-box-content -->
+									</div>
+									</div>
+									<div class="col-md-4">
+									<div class="info-box">
+									<span class="info-box-icon"><i class="far fa-calendar-alt"></i></span>
+									<hr>	
+									<div class="info-box-content">
+									<span class="info-box-text">Calendar</span>
+
+									</div>
+									<!-- /.info-box-content -->
+									</div>
+									</div>
+									</div>
+                                </div>
+                            </div>
+
+                            <!-- Color System -->
+                            
+
+                        </div>
+
+                        <div class="col-lg-6 mb-4">
+
+                            <!-- Illustrations -->
+                            <div class="card shadow mb-4" style="background-color: #6f42c1!important;">
+                                <div class="card-header py-3" style="background-color: #6f42c1!important;">
+									
+								</div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                                            src="img/undraw_posting_photo.svg" alt="">
+                                    </div>
+                                    <p>Add some quality, svg illustrations to your project courtesy of <a
+                                            >unDraw</a>, a
+                                        constantly updated collection of beautiful svg images that you can use
+                                        completely free and without attribution!</p>
+                                    <a >Browse Illustrations on
+                                        unDraw &rarr;</a>
+                                </div>
+                            </div>
+
+                            <!-- Approach -->
+                            
+
+                        </div>
+                    </div>
+
+                    <!-- Content Row -->
+                    
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>

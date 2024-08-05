@@ -1,0 +1,431 @@
+<?php include('header.php'); ?>
+<?php include('commonSidebar.php'); ?>
+        <!-- Content Wrapper -->
+ 
+
+<style>
+
+.addGoalsBtn{
+	float:right;
+	margin-bottom:5px;
+	color:white!important;
+    
+	float:center;
+    background: #1C304C;
+    
+    font-weight: 400;
+    border-radius: 2px;
+    padding: .2em 2em 0.2em 2em;
+    border: none !important;
+}
+.tnUemp {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+ 
+}
+.tnemp {
+  float: right;
+  text-align:center;
+  padding:2px 0;
+	
+}
+.cmPayroll{
+	background: #00d3c3!important; color: #fff!important;
+}
+.actionFontSize{
+	font-size:15px!important;
+	color: #1C304C!important;
+}
+.tnNotify {
+  float: left;
+  text-align:center;
+  padding:2px 0;
+  margin:0 2px;		
+}
+.tnemp a {
+  
+  color: #706e80;
+  text-align: center;
+  padding: 8px 11px;
+  text-decoration: none;
+  
+}
+.tnNotify a {
+  
+  color: white;
+  text-align: center;
+  padding: 8px 11px;
+  text-decoration: none;
+  
+}
+.tnAccept a {
+	background-color:#504a94;
+}
+.tnDecline a {
+	background-color:red;
+}
+
+th:last-child {
+  width:168px;
+}
+.table td, .table th {
+    padding: .35rem!important;
+}
+
+.leaveViewH{
+	text-align: center;
+    background: #2e2869;
+    color: white;
+    
+}
+
+.col-lg-1{
+    max-width: 4.33333%;
+	padding-right:0px!important;
+}
+.card-body{
+    
+    padding-top:15px!important;
+	
+}
+th {
+	font-size:15px!important;
+    color: #00d3c3!important;
+    position: sticky;
+    top: 0;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px 2px!important;
+}
+.table-bordered tbody tr:nth-of-type(odd){
+  background-color:white;
+ 
+}
+.table-bordered tbody tr:nth-of-type(even){
+ 
+  background-color: rgb(239 239 239);
+}
+.card-header {
+    padding: 0.3rem 1.25rem!important ;}
+</style>
+
+
+ <div id="content-wrapper bg-gradient-primary" class="container-fluid col-lg-10" style="  margin-bottom:50px; padding-left:10px;">
+
+ 
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="">
+
+                    <!-- Page Heading -->
+                    
+					<div class="card shadow mb-4" style="margin-bottom:100px;">
+					<div class="card-header ColorSecondaryPre">
+                        <div class="d-flex">
+                        <div><a href="<?=site_url('hrzone/dashboard/wall');?>" style="color: #fff;font-size: 15px;"><i class="fa fa-home" aria-hidden="true"></i></a></div>
+                        <div> &nbsp;&nbsp;<i style="font-size: 10px;color: #00d3c3;" class="fas fa-chevron-right"></i><span class="breadcrumb_text" style="font-size: 15px;color: #00d3c3;font-weight: 600;">&nbsp; Raised Tickets</span></div>
+                        </div>
+                    </div>
+                    <!-- Content Row -->
+					  <!-- Area Chart -->
+						
+							
+								<div class="">
+								
+								
+									
+									<div class="table-responsive">
+									<table class="table table-bordered" id="dataTable" width="100%">
+										<thead>
+											<tr>
+												
+												<th class="cmPayroll">S.No.</th>
+												<th class="cmPayroll">Name</th>
+												<th class="cmPayroll displayNoneContent">Employee ID</th>
+												<th class="cmPayroll displayNoneContent">Date</th>
+												<th class="cmPayroll displayNoneContent" style="min-width: 200px;">Reason</th>
+												<th class="cmPayroll displayNoneContent">To</th>
+												<th class="cmPayroll">View</th>
+												<th class="cmPayroll">Action</th>
+												
+												
+												
+											</tr>
+										</thead>
+										
+										<tbody>
+											<?php if(!empty($Ticketrecord)):  ?>
+									
+											<?php	
+											$SNo = 1;
+											
+											foreach($Ticketrecord as $emp): ?>
+											<tr style="font-size: 12px;color: #000;text-align: center;">
+											
+												<td><?php  echo $SNo; ?></td>
+												<td class="text-left"><?php  echo $emp->name; ?></td>
+												<td class="displayNoneContent"><?php  echo $emp->employee_id; ?></td>
+												
+												<td class="displayNoneContent"><?php  echo $emp->TokenDate; ?></td>
+												<td class="displayNoneContent"><?php  echo $emp->ReasonOfToken; ?></td>
+												<td class="displayNoneContent"><?php  echo $emp->organisationEmail; ?></td>
+												<td>
+													<div class="d-flex " style="justify-content: center;">
+													<ul class="tnUemp">
+													<li class="tnemp"><a href="#" data-LID="<?php echo $emp->ticketId; ?>" data-LeaveId="<?php echo $emp->id; ?>" class="Leave_View"><i style="color:blue;" class="actionFontSize fa fa-eye" aria-hidden="true"></i></a></li>
+													</ul>
+
+													</div>
+												</td>
+												<td>
+													<div class="d-flex " style="justify-content: center;">
+													<ul class="tnUemp">
+													<li class="tnNotify tnAccept"><a href="#" data-leaveAccept="<?php echo $emp->ticketId; ?>" class="LeaveAccept">Accept</a></li>
+													<li class="tnNotify tnDecline"><a href="#" data-leaveDecline="<?php echo $emp->ticketId; ?>" class="LeaveDecline">Decline</a></li>
+													</ul>
+
+													</div>
+												</td>
+												
+											</tr>
+											
+											<?php  $SNo++; endforeach;  ?>
+										<?php else: ?>
+										<tr>
+										<td colspan="3">Data is Not Available</td>
+										<?php endif; ?>
+
+										</tr>
+											
+										</tbody>
+									</table>
+								</div>
+								</div>
+							
+							
+							
+					
+							
+							
+						
+						
+                   
+
+                    <!-- Content Row -->
+                    </div>
+
+							
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+	
+	
+
+<div class="modal " id="updateModal" role="dialog">
+<div class="modal-dialog modal-lg">
+<!-- Modal content-->
+	<div class="modal-content" style="margin: 196px 9px 0 259px;  width: 89%!important; ">
+		<div class="card-header" style="padding:0!important; background-color: #2e2869;">
+		<div class="row">
+		<h6 class="ColorPrimary" style="padding-left: 302px; padding-top: 10px;">Ticket Details</h6>
+		<button style="margin-left:220px;" type="button" class="close" data-bs-dismiss="modal">&times;</button>
+		</div>
+		</div>
+
+	<div class="modal-body">
+	<div class="table-responsive" id="renderHtmlLeave">
+									
+								</div>
+	
+	</div>
+	</div>
+<!-- Content Row -->
+
+</div>
+
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+       
+		
+$(document).ready(function(){
+	
+
+ $(".LeaveAccept").click(function(){
+    var conf = 'Are you sure You have to Accept this file';
+	var id = $(this).attr('data-leaveAccept');
+	// var Yid = $(this).attr('data-yearID');
+	alert(conf);
+	var ajaxurl = "<?=site_url('hrzone/Ticket/UserTicketAccept');?>";
+        $.ajax({
+            type: "post",
+            url: ajaxurl,
+            data: { id : id, Accept:true},
+			success: response => {
+
+			if(response.status === 1){
+			
+			}
+			},
+			error: error => {
+			console.log("Error", error);
+			}
+			
+			
+	});
+	
+  });
+  
+  $(".LeaveDecline").click(function(){
+    var conf = 'Are you sure You have to Decline this file';
+	var id = $(this).attr('data-leaveDecline');
+	// var Yid = $(this).attr('data-yearID');
+	alert(conf);
+	var ajaxurl = "<?=site_url('hrzone/Ticket/UserTicketDecline');?>";
+        $.ajax({
+            type: "post",
+            url: ajaxurl,
+            data: { id : id, Decline:true},
+			success: response => {
+
+			if(response.status === 1){
+			
+			}
+			},
+			error: error => {
+			console.log("Error", error);
+			}
+			
+			
+	});
+	
+  });
+  
+  
+  
+  $(".leaveUserDetails").click(function(){
+    var conf = 'Are you sure You have to delete this file';
+	var id = $(this).attr('data-User');
+	// var Yid = $(this).attr('data-yearID');
+	alert(conf);
+	var ajaxurl = "<?=site_url('hrzone/Ticket/UserDataTicketView');?>";
+        $.ajax({
+            type: "post",
+            url: ajaxurl,
+            data: { id : id},
+			success: response => {
+
+			if(response.status === 1){
+			
+			}
+			},
+			error: error => {
+			console.log("Error", error);
+			}
+			
+			
+	});
+	
+  });
+  
+  
+  $("body").on('click', '.Leave_View', function(){
+	var id = $(this).attr('data-LeaveId');
+	var LeaveId = $(this).attr('data-LID');
+	
+	var ajaxurl = "<?=site_url('hrzone/Ticket/UserTicketDetails');?>";
+        $.ajax({
+            type: "post",
+            url: ajaxurl,
+            data: {id:id, LeaveId:LeaveId},
+			dataType: "JSON",
+			}).done(function(response){
+			$("#updateModal").modal('show');
+			if(response){
+				
+				
+				console.log(response.data);
+				$("#renderHtmlLeave").html(`
+					<table class="table table-bordered  " id="dataTable" width="100%">
+										
+										
+										<tbody>
+											
+											${response.data.map(function(data){
+										return`
+										${data.LeaveUser.map(function(LeaveUserData){
+										return`<tr>
+												
+												<td colspan="2" class="fc qdxPrintCF">Reason of Ticket</td>
+												<td class="fc qdxPrintCF">${LeaveUserData.ReasonOfToken}</td>
+												
+											</tr>
+												
+											<tr>
+												
+												<td colspan="6" class="fc qdxPrintCF">Description</td>
+												
+													
+											</tr>
+												
+											<tr>
+												
+												<td colspan="6" class="fc qdxPrintCF">${LeaveUserData.Description}</td>
+												
+													
+											</tr>`})}
+											
+											`
+										}).join('')}
+										
+										
+										
+										</tbody>
+									</table>
+										`);
+
+				
+				} else {
+				$("#AttendencedataTable tbody").html("<div>No data Found.....</div>");
+			}
+				
+        });
+	
+  });
+  
+		
+  
+  
+});	
+	
+    </script>
+<?php include('footer.php'); ?>

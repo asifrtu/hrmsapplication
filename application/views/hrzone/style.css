@@ -1,0 +1,52 @@
+.card {width:49%;margin-left: 6px;}
+.card-header i {float:right;}
+.fa-trash, .fa-pencil-alt {cursor: pointer;}
+.hidden {display:none}
+.swatch {width:20px; height:20px; float:left; margin-right:10px; border-radius: 50%; cursor: pointer; }
+.swatch:hover, .active  {border: 3px solid rgb(247, 189, 189)}
+
+body{
+    background-color: #dec9f7;
+}
+.btn-primary{
+    background-color: #1C304C;
+    border-color: #e29118;
+
+}
+label{
+    color:#343434;
+}
+
+.card{
+    width: 100%;
+    margin-left: 0px    ;
+}
+.display-4{
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.text-primary{
+    color: #1C304C!important;
+}
+.card-header{
+    padding: 5px 18px;
+    background-color: #000000b3;
+    border-bottom:none;
+}
+.fas{
+    margin-top: 5px;
+}
+.fa-trash{
+    color:red;
+}
+.fa-pencil-alt{
+    color:green;
+}
+.card-text{
+    font-size: 13px;
+}
+.card-body{
+    padding: 18px;
+    text-align: justify;
+}
